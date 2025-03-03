@@ -19,8 +19,10 @@
 
 2. 安装依赖：
    ```
-   pip install -r requirements.txt
+   pip install --no-cache-dir -r requirements.txt
    ```
+   
+   注意：如果安装过程中遇到段错误(segmentation fault)，请使用 `--no-cache-dir` 选项，这可以解决内存相关的问题。
 
 3. 运行后端服务器：
    ```
