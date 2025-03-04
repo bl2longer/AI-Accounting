@@ -19,10 +19,13 @@
 
 2. 安装依赖：
    ```
-   pip install --no-cache-dir -r requirements.txt
+   # 首先升级pip以避免段错误(segmentation fault)
+   python -m pip install --upgrade pip setuptools wheel
+   # 然后安装依赖
+   pip install -r requirements.txt
    ```
    
-   注意：如果安装过程中遇到段错误(segmentation fault)，请使用 `--no-cache-dir` 选项，这可以解决内存相关的问题。
+   注意：如果使用Python 3.12版本，可能会遇到段错误(segmentation fault)。这是由于pip版本与Python 3.12的兼容性问题导致的。升级pip到最新版本可以解决此问题。如果问题仍然存在，可以尝试使用Python 3.11或更早的版本。
 
 3. 运行后端服务器：
    ```
